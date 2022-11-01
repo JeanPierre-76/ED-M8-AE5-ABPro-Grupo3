@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div  class="container" >
+  <h1>Politicas</h1>
+
+  <div id="politicas">
+    <div class="row">
+      <% @politicas.each do |politica| %>
+
+        <div class="col">
+            <%= render politica %>
+            <p><%= link_to "Mostrar esta Noticia de Política", politica %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to "Nueva Noticia de Política", new_politica_path %>
+</div>

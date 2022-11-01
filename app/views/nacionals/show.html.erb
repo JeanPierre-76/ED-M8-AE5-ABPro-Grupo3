@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @nacional %>
+
+<div>
+  <%= link_to "Editar esta Noticia Nacional", edit_nacional_path(@nacional) %> |
+  <%= link_to "Volver a Noticias Nacionales", nacionals_path %>
+
+  <%= button_to "Destruir a Noticias Nacionales", @nacional, method: :delete %>
+</div>

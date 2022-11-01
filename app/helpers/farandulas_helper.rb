@@ -1,0 +1,2 @@
+module FarandulasHelper
+end

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @farandula %>
+
+<div>
+  <%= link_to "Editar esta Noticia de Farándula", edit_farandula_path(@farandula) %> |
+  <%= link_to "Volver a Noticias de Farándula", farandulas_path %>
+
+  <%= button_to "Destruir esta Noticia de Farándula", @farandula, method: :delete %>
+</div>

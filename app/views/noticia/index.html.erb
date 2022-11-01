@@ -1,0 +1,21 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="display-4" >Happy News </h1>
+  <h3 class="pa01" >Tiene como objetivo sacarte de la mala costumbre de consumir noticias negativas o doomscrolling</h3>
+  <p class="pa02" > </p>
+
+  <%= render "noticia/cards" %>
+
+  <div id="noticia">
+    <% @noticia.each do |noticium| %>
+      <%= render noticium %>
+      <p>
+        <%= link_to "Ver esta noticia", noticium %>
+      </p>
+    <% end %>
+  </div>
+
+  <%# No visble %>
+  <% link_to "Nueva Noticia", new_noticium_path %>
+</div>

@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div  class="container" >
+  <h1>Noticias de Farándula</h1>
+
+  <div id="farandulas">
+    <div class="row">
+      <% @farandulas.each do |farandula| %>
+
+        <div class="col">
+            <%= render farandula %>
+            <p><%= link_to "Mostrar esta Noticia de Farándula", farandula %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to "Nueva Noticia de Farándula", new_farandula_path %>
+</div>

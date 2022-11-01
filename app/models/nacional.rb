@@ -1,0 +1,2 @@
+class Nacional < ApplicationRecord
+end

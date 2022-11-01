@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @internacional %>
+
+<div>
+  <%= link_to "Editar esta Noticia Internacional", edit_internacional_path(@internacional) %> |
+  <%= link_to "Volver a Noticias Internacionales", internacionals_path %>
+
+  <%= button_to "Destruir esta Noticia Internacional", @internacional, method: :delete %>
+</div>

@@ -1,0 +1,2 @@
+class Deporte < ApplicationRecord
+end

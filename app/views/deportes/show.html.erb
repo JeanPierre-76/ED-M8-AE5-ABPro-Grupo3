@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @deporte %>
+
+<div>
+  <%= link_to "Editar esta Noticia de Deportes", edit_deporte_path(@deporte) %> |
+  <%= link_to "Volver a Noticias de Deportes", deportes_path %>
+
+  <%= button_to "Destruir esta Noticia de Deportes", @deporte, method: :delete %>
+</div>

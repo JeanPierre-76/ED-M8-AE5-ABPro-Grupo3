@@ -1,0 +1,32 @@
+<%= form_with(model: farandula) do |form| %>
+  <% if farandula.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(farandula.errors.count, "error") %> prohibited this farandula from being saved:</h2>
+
+      <ul>
+        <% farandula.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :encabezado, style: "display: block" %>
+    <%= form.text_field :encabezado %>
+  </div>
+
+  <div>
+    <%= form.label :cuepor, style: "display: block" %>
+    <%= form.text_area :cuepor %>
+  </div>
+
+  <div>
+    <%= form.label :link, style: "display: block" %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

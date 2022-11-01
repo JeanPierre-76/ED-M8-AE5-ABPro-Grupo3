@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div  class="container" >
+  <h1>Noticias Internacionales</h1>
+
+  <div id="internacionals">
+    <div class="row">
+      <% @internacionals.each do |internacional| %>
+
+        <div class="col">
+            <%= render internacional %>
+            <p><%= link_to "Mostrar esta Noticia Internacional", internacional %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to "Nueva Noticia Internacional", new_internacional_path %>
+</div>

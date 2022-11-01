@@ -1,0 +1,11 @@
+<div id="<%= dom_id deporte %>">
+  <div class="card" style="width: 18rem;">
+    <%= link_to (image_tag "01dep.jpg", class: "card-img-top"), "/deportes/" %> 
+    <div class="card-body">
+      <h5 class="card-title"><%= deporte.encabezado %></h5>
+      <p class="card-text"><%= deporte.cuepor %></p>
+      <p class="card-text"> <strong>Link:</strong> <%= deporte.link %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>

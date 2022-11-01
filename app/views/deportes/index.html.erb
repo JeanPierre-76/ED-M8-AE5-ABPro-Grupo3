@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div  class="container" >
+  <h1>Noticias de Deportes</h1>
+
+  <div id="deportes">
+    <div class="row">
+      <% @deportes.each do |deporte| %>
+
+        <div class="col">
+            <%= render deporte %>
+            <p><%= link_to "Mostrar esta Noticia de Deportes", deporte %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to "Nueva Noticia de Deportes", new_deporte_path %>
+</div>

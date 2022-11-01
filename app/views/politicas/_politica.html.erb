@@ -1,0 +1,11 @@
+<div id="<%= dom_id politica %>">
+  <div class="card" style="width: 18rem;">
+    <%= link_to (image_tag "05pol.jpg", class: "card-img-top"), "politicas/" %> 
+    <div class="card-body">
+      <h5 class="card-title"><%= politica.encabezado %></h5>
+      <p class="card-text"><%= politica.cuepor %></p>
+      <p class="card-text"> <strong>Link:</strong> <%= politica.link %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>

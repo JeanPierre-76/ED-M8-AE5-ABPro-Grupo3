@@ -1,0 +1,11 @@
+<div id="<%= dom_id farandula %>">
+  <div class="card" style="width: 18rem;">
+    <%= link_to (image_tag "02far.jpg", class: "card-img-top"), "/farandulas/" %> 
+    <div class="card-body">
+      <h5 class="card-title"><%= farandula.encabezado %></h5>
+      <p class="card-text"><%= farandula.cuepor %></p>
+      <p class="card-text"> <strong>Link:</strong> <%= farandula.link %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
