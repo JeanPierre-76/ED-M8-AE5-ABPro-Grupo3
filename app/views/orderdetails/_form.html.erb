@@ -1,0 +1,57 @@
+<%= form_with(model: orderdetail) do |form| %>
+  <% if orderdetail.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(orderdetail.errors.count, "error") %> prohibited this orderdetail from being saved:</h2>
+
+      <ul>
+        <% orderdetail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date_submitted, style: "display: block" %>
+    <%= form.time_field :date_submitted %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :subtotal, style: "display: block" %>
+    <%= form.text_field :subtotal %>
+  </div>
+
+  <div>
+    <%= form.label :shipping, style: "display: block" %>
+    <%= form.text_field :shipping %>
+  </div>
+
+  <div>
+    <%= form.label :tax, style: "display: block" %>
+    <%= form.text_field :tax %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total %>
+  </div>
+
+  <div>
+    <%= form.label :order_id, style: "display: block" %>
+    <%= form.text_field :order_id %>
+  </div>
+
+  <div>
+    <%= form.label :product_id, style: "display: block" %>
+    <%= form.text_field :product_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

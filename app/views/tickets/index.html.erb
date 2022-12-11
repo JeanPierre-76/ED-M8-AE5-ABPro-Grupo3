@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tus etiquetas</h1>
+<p class="lead" >Solo puedes ver las etiquetas que han sido creadas por ti </p>
+<%= link_to "Crear etiqueta", new_ticket_path, class: "btn btn-warning mb-4" %>
+
+<div id="tickets">
+  <% @tickets.each do |ticket| %>
+    <%= render ticket %>
+    <p>
+      <%= link_to "Mostrar esta etiqueta", ticket %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nueva etiqueta", new_ticket_path %>

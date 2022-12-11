@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  resources :politicas
-  resources :internacionals
-  resources :nacionals
-  resources :farandulas
-  resources :deportes
-  resources :noticia
+  get 'users/index'
+  resources :tickets
+  resources :orderdetails
+  resources :orders
+  get 'pages/home'
+  devise_for :users
+  resources :products
+  resources :brands
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "noticia#index"
-
-
+  root "pages#home"
 end

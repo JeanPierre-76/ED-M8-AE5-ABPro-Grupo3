@@ -1,0 +1,25 @@
+<h1>Bienvenidos</h1>
+<p>Vende tus productos</p>
+
+<% if current_user  %>
+  <h2>Hola [<%= current_user.role %>] <%= current_user.email %>  <% @a %></h2>
+  <p>Productos</p>
+  <%#= link_to "Sign out", destroy_user_session_path,  data: { turbo_method: :get }  %>
+
+  <% 50.times do |i|  %>
+    <div class="card" style="margin-bottom: 15px;">
+      <div class="card-body">
+        Producto <%= i %>
+      </div>
+    </div>
+  <% end  %>
+
+<% else %>
+
+  <p>Inicie su sesion para ver los productos</p>
+  <%= link_to "Click aqui para registrarse", new_user_registration_path %>
+  <br>
+  <%= link_to "Ingrese si es usuario!", new_user_session_path  %>
+
+<% end %>
+

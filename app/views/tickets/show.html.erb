@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ticket %>
+
+<div>
+  <%= link_to "Editar esta etiqueta", edit_ticket_path(@ticket) %> |
+  <%= link_to "Volver a etiquetas", tickets_path %>
+
+  <%= button_to "Destruir esta etiqueta", @ticket, method: :delete, class: "btn btn-outline-danger btn-sm mt-2" %>
+</div>

@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tus marcas</h1>
+<p class="lead" >Solo puedes ver las marcas que han sido creadas por ti </p>
+<%= link_to "Crear marca", new_brand_path, class: "btn btn-warning mb-4" %>
+
+<div id="brands">
+  <% @brands.each do |brand| %>
+    <%= render brand %>
+    <p>
+      <%= link_to "Mostrar esta marca", brand %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nueva marca", new_brand_path %>

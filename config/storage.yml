@@ -2,17 +2,21 @@ test:
   service: Disk
   root: <%= Rails.root.join("tmp/storage") %>
 
-local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
+# local:
+#   service: Disk
+#   root: <%= Rails.root.join("storage") %>
 
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-# amazon:
-#   service: S3
-#   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
-#   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-#   region: us-east-1
-#   bucket: your_own_bucket-<%= Rails.env %>
+amazon:
+  service: S3
+  access_key_id: AKIAR5OCX7PBOID4TMQM
+  secret_access_key: 3RNuxstCJva4xe3X1QuarlFoF09ULUBlFTQkPr1S
+  region: sa-east-1
+  bucket: m9ae4grupal
+  time_out_xon: 5000 ms
+
+  # Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
+  secret_key_base: 0bbc7f591d0e5611beed54f27669f1fb92f02292cc8f7d921699d7d48847939b416cad76474b6285c5c7eb5dd19b2117596c18d06b6a69f2452c587530d5a524
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
